@@ -5,6 +5,7 @@ import RSA.PublicKeyPair;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.javafaker.Faker;
 
 import java.sql.SQLOutput;
 
@@ -21,7 +22,8 @@ public class Main {
             System.out.println(serverResponse);
             ObjectMapper om = new ObjectMapper();
             PublicKeyPair serverPublicKeyPair = om.readValue(serverResponse, PublicKeyPair.class);
-            String hashedString = rsa.encryptValue("Hello from client", serverPublicKeyPair.getE(), serverPublicKeyPair.getN());
+            Faker faker = new Faker();
+            String hashedString = rsa.encryptValue(faker.name().fullName(), serverPublicKeyPair.getE(), serverPublicKeyPair.getN());
             client.sendMessage("Decript message;"+hashedString);
 
         }catch (Exception e) {
