@@ -3,11 +3,9 @@ package TCPClient;
 import RSA.RSA;
 import RSA.PublicKeyPair;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 
-import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
