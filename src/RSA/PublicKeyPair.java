@@ -16,6 +16,7 @@ public class PublicKeyPair {
         this.e = e;
     }
 
+    // Getter e Setter para as variáveis n e e
     public BigInteger getN() {
         return n;
     }

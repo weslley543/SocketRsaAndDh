@@ -11,6 +11,7 @@ public class PrivateKeyPair {
         this.d = d;
     }
 
+    // Getter e Setter para as variáveis n e e
     public BigInteger getN() {
         return n;
     }

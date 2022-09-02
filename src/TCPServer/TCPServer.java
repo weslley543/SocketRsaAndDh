@@ -11,6 +11,7 @@ import java.net.Socket;
 import java.sql.SQLOutput;
 
 public class TCPServer {
+    //
     private ServerSocket serverSocket;
     private static RSA rsa = new RSA();
     public void start(int port) {
@@ -31,6 +32,7 @@ public class TCPServer {
 
     public void stop() {
         try {
+            // Encerra a conexão
             serverSocket.close();
         } catch (IOException e) {
             throw new RuntimeException(e);

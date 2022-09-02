@@ -12,7 +12,10 @@ import java.sql.SQLOutput;
 public class Main {
     public static void main(String[] args) {
 
+        // Instancia a classe TCPClientt
         TCPClient client = new TCPClient();
+
+        // Conecta o cliente na porta 8000
         client.startConnection("localhost", 8000);
 
         String serverResponse=null;
